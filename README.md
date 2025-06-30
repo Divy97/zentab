@@ -22,7 +22,7 @@ A minimalistic focus extension that blocks distracting websites during focus ses
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone git@github.com:Divy97/zentab.git
     cd zentab
     ```
 
