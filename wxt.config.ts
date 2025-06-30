@@ -5,7 +5,7 @@ export default defineConfig({
   manifest: {
     name: "zenTab",
     description: "A minimalistic focus extension that blocks distracting websites during focus sessions",
-    permissions: ["storage", "tabs", "activeTab"],
+    permissions: ["storage", "tabs"],
     host_permissions: ["<all_urls>"]
   }
 });
