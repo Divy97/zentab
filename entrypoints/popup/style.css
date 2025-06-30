@@ -1,0 +1,250 @@
+:root {
+  --primary: #152c43;
+  --secondary: #72808e;
+  --accent: #bddac8;
+  --neutral: #ded0c2;
+  --background: #f5f0ec;
+  --text-light: #f5f0ec;
+  --text-dark: #152c43;
+  --danger: #d9534f;
+  --danger-hover: #c9302c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--background);
+  color: var(--text-dark);
+  width: 350px;
+  min-height: 450px;
+}
+
+#app {
+  padding: 0;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--primary);
+  color: var(--text-light);
+  border-bottom: 3px solid var(--accent);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* Session Start Form */
+.session-form {
+  padding: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--neutral);
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: normal;
+  flex: 1;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.radio-label input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--neutral);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(21, 44, 67, 0.2);
+}
+
+.form-hint {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--secondary);
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background: #2a4a69; /* a slightly lighter primary */
+}
+
+.btn-secondary {
+  background: var(--background);
+  color: var(--primary);
+  border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: white;
+}
+
+.btn-danger:hover {
+  background: var(--danger-hover);
+}
+
+/* Active Session */
+.session-active .header .icon {
+  font-size: 1.5rem;
+}
+
+.session-active .header .subtitle {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.session-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.time-remaining {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.mode-info {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  border-left: 4px solid var(--primary);
+  text-align: left;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0 1.5rem 1.5rem;
+  flex-wrap: wrap;
+}
+
+.controls .btn {
+  flex: 1;
+}
+
+/* Error Message */
+.error-message {
+  display: none;
+  background: #fbeaea;
+  color: var(--danger);
+  padding: 0.75rem;
+  margin: 0 1.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--danger);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.quote {
+  font-style: italic;
+  color: var(--secondary);
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 350px) {
+  body {
+    width: 280px;
+  }
+  
+  .header {
+    padding: 1rem;
+  }
+  
+  .session-form {
+    padding: 1rem;
+  }
+  
+  .controls {
+    flex-direction: column;
+  }
+  
+  .controls .btn {
+    flex: none;
+  }
+}

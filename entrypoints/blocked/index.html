@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zenTab - Focus Mode</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon">🧘</div>
+      <h1 id="main-heading">Focus Mode Active</h1>
+      <p class="message">Whoa! This site isn't part of your focus path. <br/>Take a breath and get back to it.</p>
+      <div class="domain" id="blocked-domain"></div>
+      
+      <div class="session-info">
+        <div class="time-remaining" id="time-remaining">Loading...</div>
+      </div>
+
+      <div class="add-domain-section">
+        <input type="text" id="add-domain-input" placeholder="e.g., new-site.com">
+        <button id="add-domain-btn" class="btn">Add Domain</button>
+      </div>
+
+      <div class="controls">
+        <button id="extend-session" class="btn extend-btn">+15 min</button>
+        <button id="reduce-session" class="btn reduce-btn">-15 min</button>
+        <button id="end-session" class="btn end-btn">End Session</button>
+      </div>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html> 
